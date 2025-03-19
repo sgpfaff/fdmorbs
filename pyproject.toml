@@ -2,19 +2,21 @@
 requires = [
   "setuptools>=62.1",
   "setuptools_scm[toml]>=8.0.0",
-  "wheel",]
+  "wheel",
+  "extension-helpers",
+  "numpy>=1.25"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "fdmorbs"
-description = "Package for conveniently creating and analyzing Fuzzy Dar"
+description = "Package for conveniently creating and analyzing suites of orbits in Fuzzy Dark Matter potentials."
 requires-python = ">=3.9"
 readme = { file = "README.rst", content-type = "text/x-rst" }
 license = { file = "licenses/LICENSE.rst" }
 authors = [
   { name = "S. Gabriel Pfaffman", email = "gabriel.pfaffman@mail.utoronto.ca" },
 ]
-dependencies = []
+dependencies = ["numpy", "agama"]
 dynamic = ["version"]
 
 [project.optional-dependencies]
